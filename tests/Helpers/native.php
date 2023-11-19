@@ -21,9 +21,6 @@ use LaravelLang\NativeCurrencyNames\Enums\SortBy;
 use LaravelLang\NativeCurrencyNames\Helpers\Arr;
 
 /**
- * @param  string  $locale
- * @param  SortBy  $sortBy
- *
  * @return array<CurrencyData>
  */
 function sourceLocale(string $locale, SortBy $sortBy = SortBy::Value): array
