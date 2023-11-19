@@ -56,7 +56,7 @@ class Native
             name     : $items[$locale . '.name'],
             native   : $items[$locale . '.native'],
             localized: $items[$locale . '.localized'],
-        ), Locale::values());
+        ), Locale::onlyValues());
     }
 
     protected static function load(string $path): array
