@@ -15,31 +15,10 @@
 
 declare(strict_types=1);
 
-use LaravelLang\LocaleList\Locale;
-use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
-use LaravelLang\NativeCurrencyNames\Enums\SortBy;
-use LaravelLang\NativeCurrencyNames\Helpers\Arr;
+use LaravelLang\NativeCurrencyNames\Helpers\Path;
+use LaravelLang\NativeCurrencyNames\Services\Filesystem;
 
-/**
- * @return array<CurrencyData>
- */
-function sourceLocale(string $locale, SortBy $sortBy = SortBy::Value): array
+function sourceLocale(string $locale): array
 {
-    $items = Arr::sortBy(Arr::file(__DIR__ . '/../../locales/' . $locale . '/json.json'), $sortBy);
-
-    $result = [];
-
-    foreach (Locale::values() as $value) {
-        $result[$value] = new CurrencyData(
-            locale   : $items[$value . '.locale'],
-            country  : $items[$value . '.country'],
-            code     : $items[$value . '.code'],
-            numeric  : isset($items[$value . '.numeric']) ? (int) $items[$value . '.numeric'] : null,
-            name     : $items[$value . '.name'],
-            native   : $items[$value . '.native'],
-            localized: $items[$value . '.localized'],
-        );
-    }
-
-    return $result;
+    return Filesystem::load(Path::resolve($locale));
 }

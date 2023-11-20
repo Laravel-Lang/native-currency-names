@@ -15,13 +15,9 @@
 
 declare(strict_types=1);
 
-use DragonCode\Support\Facades\Helpers\Arr;
-use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
+use Illuminate\Support\Collection;
 
-function flatten(array $items): array
+function flatten(Collection $items): array
 {
-    return Arr::of($items)
-        ->renameKeys(fn (int|string $key, CurrencyData $data) => is_string($key) ? $key : $data->locale)
-        ->map(fn (CurrencyData $data) => $data->localized)
-        ->toArray();
+    return $items->toArray();
 }
