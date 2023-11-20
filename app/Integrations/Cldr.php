@@ -27,7 +27,7 @@ class Cldr extends Integration
         return Currency::getName($this->code($locale), locale: $forLocale);
     }
 
-    public function code(string $locale, bool $asNumeric = false): string|int|null
+    public function code(string $locale, bool $asNumeric = false): int|string|null
     {
         $code = Currency::getCurrencyForTerritory(Data::getTerritory($locale));
 

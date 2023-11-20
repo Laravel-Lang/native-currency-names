@@ -81,7 +81,7 @@ class Collect extends Processor
         return $this->cldr->name($locale, $forLocale);
     }
 
-    protected function findCode(string $locale, bool $asNumeric = false): string|int|null
+    protected function findCode(string $locale, bool $asNumeric = false): int|string|null
     {
         return $this->cldr->code($locale, $asNumeric);
     }

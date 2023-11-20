@@ -19,7 +19,7 @@ namespace LaravelLang\Dev\Integrations;
 
 abstract class Integration
 {
-    abstract public function code(string $locale, bool $asNumeric = false): string|int|null;
+    abstract public function code(string $locale, bool $asNumeric = false): int|string|null;
 
     abstract public function name(string $locale, string $forLocale): string;
 }

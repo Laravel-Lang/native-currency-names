@@ -15,8 +15,8 @@
 
 declare(strict_types=1);
 
-use LaravelLang\NativeCurrencyNames\Enums\SortBy;
 use LaravelLang\NativeCurrencyNames\CurrencyNames;
+use LaravelLang\NativeCurrencyNames\Enums\SortBy;
 
 it('checks default sorting', function (string $locale) {
     expect(CurrencyNames::get($locale))

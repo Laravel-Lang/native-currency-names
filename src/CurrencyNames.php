@@ -29,9 +29,6 @@ class CurrencyNames
     public static string $default = '_native';
 
     /**
-     * @param  BackedEnum|string|null  $locale
-     * @param  SortBy  $sortBy
-     *
      * @return Collection<CurrencyData>
      */
     public static function get(BackedEnum|string|null $locale = null, SortBy $sortBy = SortBy::None): Collection
