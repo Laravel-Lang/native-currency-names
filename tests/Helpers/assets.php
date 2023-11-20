@@ -16,7 +16,6 @@
 declare(strict_types=1);
 
 use LaravelLang\LocaleList\Locale;
-use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
 use LaravelLang\NativeCurrencyNames\Enums\SortBy;
 use LaravelLang\NativeCurrencyNames\Helpers\Arr;
 use PHPUnit\Framework\Assert;
@@ -27,29 +26,20 @@ expect()->extend('toBeSameCount', function () {
     return $this;
 });
 
-expect()->extend('toBeLocale', function (Locale|string $locale, SortBy $sortBy = SortBy::Value) {
-    $values = sourceLocale($locale->value ?? $locale, $sortBy);
+expect()->extend('toBeLocale', function (Locale|string $locale, SortBy $sortBy = SortBy::None) {
+    $values = Arr::sortBy(sourceLocale($locale->value ?? $locale), $sortBy);
 
-    Assert::assertSame(
-        flatten($values),
-        flatten($this->value)
-    );
+    Assert::assertSame($values, flatten($this->value));
 
     return $this;
 });
 
-expect()->extend('toBeCompileLocales', function (SortBy $sortBy = SortBy::Value) {
-    $result = [];
+expect()->extend('toBeCompileLocales', function (SortBy $sortBy = SortBy::None) {
+    return $this->toBeLocale('_native', $sortBy);
+});
 
-    /** @var CurrencyData $item */
-    foreach ($this->value as $item) {
-        $result[$item->locale] = sourceLocale($item->locale, $sortBy)[$item->locale]->native;
-    }
-
-    Assert::assertSame(
-        Arr::sortBy($result, $sortBy),
-        Arr::sortBy(flatten($this->value), $sortBy)
-    );
+expect()->extend('toBeSameNames', function () {
+    Assert::assertSame($this->value->native, $this->value->localized);
 
     return $this;
 });

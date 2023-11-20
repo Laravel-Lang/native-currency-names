@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
     -   name: Bug Report
-        url: https://github.com/Laravel-Lang/common/issues/new?assignees=andrey-helldar&labels=bug%2Cnative-currency-names&template=bug_report.yml&title=%5BBug%5D%3A+&environment-package-name=laravel-lang%2Fnative-currency-names
+        url: https://github.com/Laravel-Lang/common/issues/new?assignees=andrey-helldar&labels=bug%2Cnative-country-names&template=bug_report.yml&title=%5BBug%5D%3A+&environment-package-name=laravel-lang%2Fnative-country-names
         about: Report a bug or other issue
     -   name: Feature Request
-        url: https://github.com/Laravel-Lang/common/issues/new?labels=feature%2Cnative-currency-names&projects=&template=feature_request.yml
+        url: https://github.com/Laravel-Lang/common/issues/new?labels=feature%2Cnative-country-names&projects=&template=feature_request.yml
         about: Propose a new feature
     -   name: Questions & Other
         url: https://github.com/Laravel-Lang/common/discussions

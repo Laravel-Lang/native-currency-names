@@ -17,37 +17,72 @@ declare(strict_types=1);
 
 namespace LaravelLang\Dev\Processors;
 
-use LaravelLang\NativeCurrencyNames\Native;
+use LaravelLang\Dev\Integrations\Cldr as CldrIntegration;
+use LaravelLang\NativeCurrencyNames\CurrencyNames;
+use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class Collect extends Processor
 {
-    protected string $targetFile = __DIR__ . '/../../locales/_native/json.json';
+    protected array $collection = [];
+
+    public function __construct(
+        OutputInterface $output,
+        protected CldrIntegration $cldr = new CldrIntegration()
+    ) {
+        parent::__construct($output);
+    }
 
     public function handle(): void
     {
         $this->output->writeln('Collecting locales...');
-        $collection = $this->compile();
+        $this->collectLocales();
 
-        $this->output->writeln('Store to file...');
-        $this->store($this->targetFile, $collection);
+        $this->output->writeln('Store locales...');
+        $this->storeLocales();
     }
 
-    protected function compile(): array
+    protected function collectLocales(): void
     {
-        $result = [];
+        foreach ($this->locales() as $first) {
+            $this->collection[$first]['tl'] = $this->data('PHP', 608, 'Philippine Peso', 'Philippine Peso');
 
-        foreach ($this->locales() as $locale) {
-            $currency = Native::get($locale);
+            foreach ($this->locales() as $second) {
+                $data = $this->data(
+                    $this->findCode($second),
+                    $this->findCode($second, true),
+                    $this->findName($second, $second),
+                    $this->findName($second, $first)
+                );
 
-            $result[$locale . '.locale']    = $currency[$locale . '.locale'];
-            $result[$locale . '.country']   = $currency[$locale . '.country'];
-            $result[$locale . '.code']      = $currency[$locale . '.code'];
-            $result[$locale . '.numeric']   = $currency[$locale . '.numeric'];
-            $result[$locale . '.name']      = $currency[$locale . '.name'];
-            $result[$locale . '.native']    = $currency[$locale . '.native'];
-            $result[$locale . '.localized'] = $currency[$locale . '.localized'];
+                $this->collection[$first][$second] = $data;
+
+                if ($first === $second) {
+                    $this->collection[CurrencyNames::$default][$first] = $data;
+                }
+            }
         }
+    }
 
-        return $result;
+    protected function data(string $code, ?int $numeric, string $native, string $localized): array
+    {
+        return (new CurrencyData($code, $numeric, $native, $localized))->toArray();
+    }
+
+    protected function storeLocales(): void
+    {
+        foreach ($this->collection as $locale => $values) {
+            $this->store($locale, $values);
+        }
+    }
+
+    protected function findName(string $locale, string $forLocale): string
+    {
+        return $this->cldr->name($locale, $forLocale);
+    }
+
+    protected function findCode(string $locale, bool $asNumeric = false): string|int|null
+    {
+        return $this->cldr->code($locale, $asNumeric);
     }
 }

@@ -17,15 +17,24 @@ declare(strict_types=1);
 
 namespace LaravelLang\NativeCurrencyNames\Data;
 
-class CurrencyData
+use Illuminate\Contracts\Support\Arrayable;
+
+class CurrencyData implements Arrayable
 {
     public function __construct(
-        public string $locale,
-        public string $country,
         public string $code,
         public ?int $numeric,
-        public string $name,
         public string $native,
         public string $localized
     ) {}
+
+    public function toArray(): array
+    {
+        return [
+            'code'      => $this->code,
+            'numeric'   => $this->numeric,
+            'native'    => $this->native,
+            'localized' => $this->localized,
+        ];
+    }
 }

@@ -17,30 +17,20 @@ declare(strict_types=1);
 
 namespace LaravelLang\Dev\Integrations;
 
-use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
-use Punic\Currency as PunicCurrency;
+use Punic\Currency;
 use Punic\Data;
 
 class Cldr extends Integration
 {
-    public function get(string $locale, string $forLocale): ?CurrencyData
+    public function name(string $locale, string $forLocale): string
     {
-        return $this->find($locale, $forLocale);
+        return Currency::getName($this->code($locale), locale: $forLocale);
     }
 
-    protected function find(string $locale, string $forLocale): CurrencyData
+    public function code(string $locale, bool $asNumeric = false): string|int|null
     {
-        $territoryCode = Data::getTerritory($locale);
-        $code          = PunicCurrency::getCurrencyForTerritory($territoryCode);
+        $code = Currency::getCurrencyForTerritory(Data::getTerritory($locale));
 
-        return new CurrencyData(
-            locale   : $locale,
-            country  : $territoryCode,
-            code     : $code,
-            numeric  : (int) PunicCurrency::getNumericCode($code),
-            name     : PunicCurrency::getName($code, locale: 'en'),
-            native   : PunicCurrency::getName($code, locale: $locale),
-            localized: PunicCurrency::getName($code, locale: $forLocale)
-        );
+        return ($asNumeric ? Currency::getNumericCode($code) : $code) ?: null;
     }
 }

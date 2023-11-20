@@ -17,9 +17,9 @@ declare(strict_types=1);
 
 namespace LaravelLang\Dev\Integrations;
 
-use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
-
 abstract class Integration
 {
-    abstract public function get(string $locale, string $forLocale): ?CurrencyData;
+    abstract public function code(string $locale, bool $asNumeric = false): string|int|null;
+
+    abstract public function name(string $locale, string $forLocale): string;
 }

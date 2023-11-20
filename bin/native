@@ -16,9 +16,9 @@
 
 declare(strict_types=1);
 
+use Dotenv\Dotenv;
 use LaravelLang\Dev\Commands\Cldr;
 use LaravelLang\Dev\Commands\Collect;
-use LaravelLang\Dev\Commands\Translate;
 use Symfony\Component\Console\Application;
 
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
@@ -44,10 +44,12 @@ if (is_null($file)) {
 
 require_once $file;
 
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->safeLoad();
+
 $application = new Application('Laravel Lang: Native Locale Names');
 
 $application->add(new Cldr());
 $application->add(new Collect());
-$application->add(new Translate());
 
 $application->run();
