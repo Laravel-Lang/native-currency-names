@@ -71,14 +71,9 @@
         "sort-packages": true
     },
     "scripts": {
-        "post-install-cmd": [
-            "@cldr"
-        ],
-        "post-update-cmd": [
-            "@cldr"
-        ],
-        "cldr": [
-            "php bin/native cldr"
+        "collect": [
+            "php bin/native cldr",
+            "php bin/native collect"
         ],
         "test": [
             "php vendor/bin/pest --parallel"
