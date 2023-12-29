@@ -36,373 +36,601 @@ it('must check the coincidence of the native and translated values')
 it('should check the returned list in French')
     ->expect(fn () => flatten(CurrencyNames::get(Locale::French, SortBy::Key)))
     ->toBe([
-        'af' => [
+        'af'         => [
             'code'      => 'ZAR',
             'numeric'   => 710,
             'native'    => 'Suid-Afrikaanse rand',
             'localized' => 'rand sud-africain',
         ],
-        'ar' => [
+        'ak'         => [
+            'code'      => 'GHS',
+            'numeric'   => 936,
+            'native'    => 'Ghana Sidi',
+            'localized' => 'cédi ghanéen',
+        ],
+        'am'         => [
+            'code'      => 'ETB',
+            'numeric'   => 230,
+            'native'    => 'የኢትዮጵያ ብር',
+            'localized' => 'birr éthiopien',
+        ],
+        'ar'         => [
             'code'      => 'EGP',
             'numeric'   => 818,
             'native'    => 'جنيه مصري',
             'localized' => 'livre égyptienne',
         ],
-        'az' => [
+        'as'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ভাৰতীয় ৰুপী',
+            'localized' => 'roupie indienne',
+        ],
+        'az'         => [
             'code'      => 'AZN',
             'numeric'   => 944,
             'native'    => 'Azərbaycan Manatı',
             'localized' => 'manat azéri',
         ],
-        'be' => [
+        'be'         => [
             'code'      => 'BYN',
-            'numeric'   => null,
+            'numeric'   => 840,
             'native'    => 'беларускі рубель',
             'localized' => 'rouble biélorusse',
         ],
-        'bg' => [
+        'bg'         => [
             'code'      => 'BGN',
             'numeric'   => 975,
             'native'    => 'Български лев',
             'localized' => 'lev bulgare',
         ],
-        'bn' => [
+        'bho'        => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'INR',
+            'localized' => 'roupie indienne',
+        ],
+        'bm'         => [
+            'code'      => 'XOF',
+            'numeric'   => 952,
+            'native'    => 'sefa Fraŋ (BCEAO)',
+            'localized' => 'franc CFA (BCEAO)',
+        ],
+        'bn'         => [
             'code'      => 'BDT',
             'numeric'   => 50,
             'native'    => 'বাংলাদেশী টাকা',
             'localized' => 'taka bangladeshi',
         ],
-        'bs' => [
+        'bs'         => [
             'code'      => 'BAM',
             'numeric'   => 977,
             'native'    => 'Bosanskohercegovačka konvertibilna marka',
             'localized' => 'mark convertible bosniaque',
         ],
-        'ca' => [
+        'ca'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
         ],
-        'cs' => [
+        'ceb'        => [
+            'code'      => 'PHP',
+            'numeric'   => 608,
+            'native'    => 'Philippine Peso',
+            'localized' => 'peso philippin',
+        ],
+        'ckb'        => [
+            'code'      => 'IQD',
+            'numeric'   => 368,
+            'native'    => 'IQD',
+            'localized' => 'dinar irakien',
+        ],
+        'cs'         => [
             'code'      => 'CZK',
             'numeric'   => 203,
             'native'    => 'česká koruna',
             'localized' => 'couronne tchèque',
         ],
-        'cy' => [
+        'cy'         => [
             'code'      => 'GBP',
             'numeric'   => 826,
             'native'    => 'Punt Prydain',
             'localized' => 'livre sterling',
         ],
-        'da' => [
+        'da'         => [
             'code'      => 'DKK',
             'numeric'   => 208,
             'native'    => 'dansk krone',
             'localized' => 'couronne danoise',
         ],
-        'de' => [
+        'de'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Euro',
             'localized' => 'euro',
         ],
-        'de_CH' => [
+        'de_CH'      => [
             'code'      => 'CHF',
             'numeric'   => 756,
             'native'    => 'Schweizer Franken',
             'localized' => 'franc suisse',
         ],
-        'el' => [
+        'doi'        => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारती रपेऽ',
+            'localized' => 'roupie indienne',
+        ],
+        'ee'         => [
+            'code'      => 'GHS',
+            'numeric'   => 936,
+            'native'    => 'ghana siɖi',
+            'localized' => 'cédi ghanéen',
+        ],
+        'el'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Ευρώ',
             'localized' => 'euro',
         ],
-        'en' => [
+        'en'         => [
             'code'      => 'USD',
             'numeric'   => 840,
             'native'    => 'US Dollar',
             'localized' => 'dollar des États-Unis',
         ],
-        'es' => [
+        'eo'         => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => '',
+            'localized' => '',
+        ],
+        'es'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
         ],
-        'et' => [
+        'et'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
         ],
-        'eu' => [
+        'eu'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euroa',
             'localized' => 'euro',
         ],
-        'fa' => [
+        'fa'         => [
             'code'      => 'IRR',
             'numeric'   => 364,
             'native'    => 'ریال ایران',
             'localized' => 'riyal iranien',
         ],
-        'fi' => [
+        'fi'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
         ],
-        'fil' => [
+        'fil'        => [
             'code'      => 'PHP',
             'numeric'   => 608,
             'native'    => 'Piso ng Pilipinas',
             'localized' => 'peso philippin',
         ],
-        'fr' => [
+        'fr'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
         ],
-        'gl' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'euro',
-            'localized' => 'euro',
-        ],
-        'gu' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'ભારતીય રૂપિયા',
-            'localized' => 'roupie indienne',
-        ],
-        'he' => [
-            'code'      => 'ILS',
-            'numeric'   => 376,
-            'native'    => 'שקל חדש',
-            'localized' => 'nouveau shekel israélien',
-        ],
-        'hi' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'भारतीय रुपया',
-            'localized' => 'roupie indienne',
-        ],
-        'hr' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'euro',
-            'localized' => 'euro',
-        ],
-        'hu' => [
-            'code'      => 'HUF',
-            'numeric'   => 348,
-            'native'    => 'magyar forint',
-            'localized' => 'forint hongrois',
-        ],
-        'hy' => [
-            'code'      => 'AMD',
-            'numeric'   => 51,
-            'native'    => 'հայկական դրամ',
-            'localized' => 'dram arménien',
-        ],
-        'id' => [
-            'code'      => 'IDR',
-            'numeric'   => 360,
-            'native'    => 'Rupiah Indonesia',
-            'localized' => 'roupie indonésienne',
-        ],
-        'is' => [
-            'code'      => 'ISK',
-            'numeric'   => 352,
-            'native'    => 'íslensk króna',
-            'localized' => 'couronne islandaise',
-        ],
-        'it' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'euro',
-            'localized' => 'euro',
-        ],
-        'ja' => [
-            'code'      => 'JPY',
-            'numeric'   => 392,
-            'native'    => '日本円',
-            'localized' => 'yen japonais',
-        ],
-        'ka' => [
-            'code'      => 'GEL',
-            'numeric'   => 981,
-            'native'    => 'ქართული ლარი',
-            'localized' => 'lari géorgien',
-        ],
-        'kk' => [
-            'code'      => 'KZT',
-            'numeric'   => 398,
-            'native'    => 'Қазақстан теңгесі',
-            'localized' => 'tenge kazakh',
-        ],
-        'km' => [
-            'code'      => 'KHR',
-            'numeric'   => 116,
-            'native'    => 'រៀល​កម្ពុជា',
-            'localized' => 'riel cambodgien',
-        ],
-        'kn' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'ಭಾರತೀಯ ರೂಪಾಯಿ',
-            'localized' => 'roupie indienne',
-        ],
-        'ko' => [
-            'code'      => 'KRW',
-            'numeric'   => 410,
-            'native'    => '대한민국 원',
-            'localized' => 'won sud-coréen',
-        ],
-        'lt' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'Euras',
-            'localized' => 'euro',
-        ],
-        'lv' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'eiro',
-            'localized' => 'euro',
-        ],
-        'mk' => [
-            'code'      => 'MKD',
-            'numeric'   => 807,
-            'native'    => 'Македонски денар',
-            'localized' => 'denar macédonien',
-        ],
-        'mn' => [
-            'code'      => 'MNT',
-            'numeric'   => 496,
-            'native'    => 'Монгол төгрөг',
-            'localized' => 'tugrik mongol',
-        ],
-        'mr' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'भारतीय रुपया',
-            'localized' => 'roupie indienne',
-        ],
-        'ms' => [
-            'code'      => 'MYR',
-            'numeric'   => 458,
-            'native'    => 'Ringgit Malaysia',
-            'localized' => 'ringgit malais',
-        ],
-        'nb' => [
-            'code'      => 'NOK',
-            'numeric'   => 578,
-            'native'    => 'norske kroner',
-            'localized' => 'couronne norvégienne',
-        ],
-        'ne' => [
-            'code'      => 'NPR',
-            'numeric'   => 524,
-            'native'    => 'नेपाली रूपैयाँ',
-            'localized' => 'roupie népalaise',
-        ],
-        'nl' => [
+        'fy'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Euro',
             'localized' => 'euro',
         ],
-        'nn' => [
-            'code'      => 'NOK',
-            'numeric'   => 578,
-            'native'    => 'norske kroner',
-            'localized' => 'couronne norvégienne',
-        ],
-        'oc' => [
+        'ga'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
-            'native'    => 'EUR',
+            'native'    => 'Euro',
             'localized' => 'euro',
         ],
-        'pl' => [
-            'code'      => 'PLN',
-            'numeric'   => 985,
-            'native'    => 'złoty polski',
-            'localized' => 'zloty polonais',
+        'gd'         => [
+            'code'      => 'GBP',
+            'numeric'   => 826,
+            'native'    => 'Punnd Sasannach',
+            'localized' => 'livre sterling',
         ],
-        'ps' => [
-            'code'      => 'AFN',
-            'numeric'   => 971,
-            'native'    => 'افغانۍ',
-            'localized' => 'afghani afghan',
-        ],
-        'pt' => [
-            'code'      => 'BRL',
-            'numeric'   => 986,
-            'native'    => 'Real brasileiro',
-            'localized' => 'réal brésilien',
-        ],
-        'pt_BR' => [
-            'code'      => 'BRL',
-            'numeric'   => 986,
-            'native'    => 'Real brasileiro',
-            'localized' => 'réal brésilien',
-        ],
-        'ro' => [
-            'code'      => 'RON',
-            'numeric'   => 946,
-            'native'    => 'leu românesc',
-            'localized' => 'leu roumain',
-        ],
-        'ru' => [
-            'code'      => 'RUB',
-            'numeric'   => 643,
-            'native'    => 'российский рубль',
-            'localized' => 'rouble russe',
-        ],
-        'sc' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'èuro',
-            'localized' => 'euro',
-        ],
-        'si' => [
-            'code'      => 'LKR',
-            'numeric'   => 144,
-            'native'    => 'ශ්‍රී ලංකා රුපියල',
-            'localized' => 'roupie srilankaise',
-        ],
-        'sk' => [
+        'gl'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
         ],
-        'sl' => [
+        'gu'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ભારતીય રૂપિયા',
+            'localized' => 'roupie indienne',
+        ],
+        'ha'         => [
+            'code'      => 'NGN',
+            'numeric'   => 566,
+            'native'    => 'Nairar Najeriya',
+            'localized' => 'naira nigérian',
+        ],
+        'haw'        => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => 'USD',
+            'localized' => 'dollar des États-Unis',
+        ],
+        'he'         => [
+            'code'      => 'ILS',
+            'numeric'   => 376,
+            'native'    => 'שקל חדש',
+            'localized' => 'nouveau shekel israélien',
+        ],
+        'hi'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रुपया',
+            'localized' => 'roupie indienne',
+        ],
+        'hr'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'euro',
+            'localized' => 'euro',
+        ],
+        'hu'         => [
+            'code'      => 'HUF',
+            'numeric'   => 348,
+            'native'    => 'magyar forint',
+            'localized' => 'forint hongrois',
+        ],
+        'hy'         => [
+            'code'      => 'AMD',
+            'numeric'   => 51,
+            'native'    => 'հայկական դրամ',
+            'localized' => 'dram arménien',
+        ],
+        'id'         => [
+            'code'      => 'IDR',
+            'numeric'   => 360,
+            'native'    => 'Rupiah Indonesia',
+            'localized' => 'roupie indonésienne',
+        ],
+        'ig'         => [
+            'code'      => 'NGN',
+            'numeric'   => 566,
+            'native'    => 'Naịra',
+            'localized' => 'naira nigérian',
+        ],
+        'is'         => [
+            'code'      => 'ISK',
+            'numeric'   => 352,
+            'native'    => 'íslensk króna',
+            'localized' => 'couronne islandaise',
+        ],
+        'it'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'euro',
+            'localized' => 'euro',
+        ],
+        'ja'         => [
+            'code'      => 'JPY',
+            'numeric'   => 392,
+            'native'    => '日本円',
+            'localized' => 'yen japonais',
+        ],
+        'ka'         => [
+            'code'      => 'GEL',
+            'numeric'   => 981,
+            'native'    => 'ქართული ლარი',
+            'localized' => 'lari géorgien',
+        ],
+        'kk'         => [
+            'code'      => 'KZT',
+            'numeric'   => 398,
+            'native'    => 'Қазақстан теңгесі',
+            'localized' => 'tenge kazakh',
+        ],
+        'km'         => [
+            'code'      => 'KHR',
+            'numeric'   => 116,
+            'native'    => 'រៀល​កម្ពុជា',
+            'localized' => 'riel cambodgien',
+        ],
+        'kn'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ಭಾರತೀಯ ರೂಪಾಯಿ',
+            'localized' => 'roupie indienne',
+        ],
+        'ko'         => [
+            'code'      => 'KRW',
+            'numeric'   => 410,
+            'native'    => '대한민국 원',
+            'localized' => 'won sud-coréen',
+        ],
+        'ku'         => [
+            'code'      => 'TRY',
+            'numeric'   => 949,
+            'native'    => 'TRY',
+            'localized' => 'livre turque',
+        ],
+        'ky'         => [
+            'code'      => 'KGS',
+            'numeric'   => 417,
+            'native'    => 'Кыргызстан сому',
+            'localized' => 'som kirghize',
+        ],
+        'lb'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euro',
+            'localized' => 'euro',
+        ],
+        'lg'         => [
+            'code'      => 'UGX',
+            'numeric'   => 800,
+            'native'    => 'Silingi eya Yuganda',
+            'localized' => 'shilling ougandais',
+        ],
+        'ln'         => [
+            'code'      => 'CDF',
+            'numeric'   => 976,
+            'native'    => 'Falánga ya Kongó',
+            'localized' => 'franc congolais',
+        ],
+        'lo'         => [
+            'code'      => 'LAK',
+            'numeric'   => 418,
+            'native'    => 'ລາວ ກີບ',
+            'localized' => 'kip loatien',
+        ],
+        'lt'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euras',
+            'localized' => 'euro',
+        ],
+        'lv'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'eiro',
+            'localized' => 'euro',
+        ],
+        'mai'        => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रुपया',
+            'localized' => 'roupie indienne',
+        ],
+        'mg'         => [
+            'code'      => 'MGA',
+            'numeric'   => 969,
+            'native'    => 'Ariary',
+            'localized' => 'ariary malgache',
+        ],
+        'mi'         => [
+            'code'      => 'NZD',
+            'numeric'   => 554,
+            'native'    => 'Tāra o Aotearoa',
+            'localized' => 'dollar néo-zélandais',
+        ],
+        'mk'         => [
+            'code'      => 'MKD',
+            'numeric'   => 807,
+            'native'    => 'Македонски денар',
+            'localized' => 'denar macédonien',
+        ],
+        'ml'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ഇന്ത്യൻ രൂപ',
+            'localized' => 'roupie indienne',
+        ],
+        'mn'         => [
+            'code'      => 'MNT',
+            'numeric'   => 496,
+            'native'    => 'Монгол төгрөг',
+            'localized' => 'tugrik mongol',
+        ],
+        'mni_Mtei'   => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'Indian Rupee',
+            'localized' => 'roupie indienne',
+        ],
+        'mr'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रुपया',
+            'localized' => 'roupie indienne',
+        ],
+        'ms'         => [
+            'code'      => 'MYR',
+            'numeric'   => 458,
+            'native'    => 'Ringgit Malaysia',
+            'localized' => 'ringgit malais',
+        ],
+        'mt'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'ewro',
+            'localized' => 'euro',
+        ],
+        'my'         => [
+            'code'      => 'MMK',
+            'numeric'   => 104,
+            'native'    => 'မြန်မာ ကျပ်',
+            'localized' => 'kyat myanmarais',
+        ],
+        'nb'         => [
+            'code'      => 'NOK',
+            'numeric'   => 578,
+            'native'    => 'norske kroner',
+            'localized' => 'couronne norvégienne',
+        ],
+        'ne'         => [
+            'code'      => 'NPR',
+            'numeric'   => 524,
+            'native'    => 'नेपाली रूपैयाँ',
+            'localized' => 'roupie népalaise',
+        ],
+        'nl'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euro',
+            'localized' => 'euro',
+        ],
+        'nn'         => [
+            'code'      => 'NOK',
+            'numeric'   => 578,
+            'native'    => 'norske kroner',
+            'localized' => 'couronne norvégienne',
+        ],
+        'oc'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'EUR',
+            'localized' => 'euro',
+        ],
+        'om'         => [
+            'code'      => 'ETB',
+            'numeric'   => 230,
+            'native'    => 'Itoophiyaa Birrii',
+            'localized' => 'birr éthiopien',
+        ],
+        'or'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ଭାରତୀୟ ଟଙ୍କା',
+            'localized' => 'roupie indienne',
+        ],
+        'pa'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ਭਾਰਤੀ ਰੁਪਇਆ',
+            'localized' => 'roupie indienne',
+        ],
+        'pl'         => [
+            'code'      => 'PLN',
+            'numeric'   => 985,
+            'native'    => 'złoty polski',
+            'localized' => 'zloty polonais',
+        ],
+        'ps'         => [
+            'code'      => 'AFN',
+            'numeric'   => 971,
+            'native'    => 'افغانۍ',
+            'localized' => 'afghani afghan',
+        ],
+        'pt'         => [
+            'code'      => 'BRL',
+            'numeric'   => 986,
+            'native'    => 'Real brasileiro',
+            'localized' => 'réal brésilien',
+        ],
+        'pt_BR'      => [
+            'code'      => 'BRL',
+            'numeric'   => 986,
+            'native'    => 'Real brasileiro',
+            'localized' => 'réal brésilien',
+        ],
+        'qu'         => [
+            'code'      => 'PEN',
+            'numeric'   => 604,
+            'native'    => 'Sol Peruano',
+            'localized' => 'sol péruvien',
+        ],
+        'ro'         => [
+            'code'      => 'RON',
+            'numeric'   => 946,
+            'native'    => 'leu românesc',
+            'localized' => 'leu roumain',
+        ],
+        'ru'         => [
+            'code'      => 'RUB',
+            'numeric'   => 643,
+            'native'    => 'российский рубль',
+            'localized' => 'rouble russe',
+        ],
+        'rw'         => [
+            'code'      => 'RWF',
+            'numeric'   => 646,
+            'native'    => 'RWF',
+            'localized' => 'franc rwandais',
+        ],
+        'sa'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रूप्यकम्',
+            'localized' => 'roupie indienne',
+        ],
+        'sc'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'èuro',
+            'localized' => 'euro',
+        ],
+        'sd'         => [
+            'code'      => 'PKR',
+            'numeric'   => 586,
+            'native'    => 'پاڪستاني رپي',
+            'localized' => 'roupie pakistanaise',
+        ],
+        'si'         => [
+            'code'      => 'LKR',
+            'numeric'   => 144,
+            'native'    => 'ශ්‍රී ලංකා රුපියල',
+            'localized' => 'roupie srilankaise',
+        ],
+        'sk'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'euro',
+            'localized' => 'euro',
+        ],
+        'sl'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'evro',
             'localized' => 'euro',
         ],
-        'sq' => [
+        'sn'         => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => 'Dora re Amerika',
+            'localized' => 'dollar des États-Unis',
+        ],
+        'so'         => [
+            'code'      => 'SOS',
+            'numeric'   => 706,
+            'native'    => 'Shilingka Soomaaliya',
+            'localized' => 'shilling somalien',
+        ],
+        'sq'         => [
             'code'      => 'ALL',
             'numeric'   => 8,
             'native'    => 'Leku shqiptar',
             'localized' => 'lek albanais',
         ],
-        'sr_Cyrl' => [
+        'sr_Cyrl'    => [
             'code'      => 'RSD',
             'numeric'   => 941,
             'native'    => 'српски динар',
             'localized' => 'dinar serbe',
         ],
-        'sr_Latn' => [
+        'sr_Latn'    => [
             'code'      => 'RSD',
             'numeric'   => 941,
             'native'    => 'srpski dinar',
@@ -414,474 +642,756 @@ it('should check the returned list in French')
             'native'    => 'Evro',
             'localized' => 'euro',
         ],
-        'sv' => [
+        'su'         => [
+            'code'      => 'IDR',
+            'numeric'   => 360,
+            'native'    => 'Rupee Indonésia',
+            'localized' => 'roupie indonésienne',
+        ],
+        'sv'         => [
             'code'      => 'SEK',
             'numeric'   => 752,
             'native'    => 'svensk krona',
             'localized' => 'couronne suédoise',
         ],
-        'sw' => [
+        'sw'         => [
             'code'      => 'TZS',
             'numeric'   => 834,
             'native'    => 'Shilingi ya Tanzania',
             'localized' => 'shilling tanzanien',
         ],
-        'tg' => [
+        'ta'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'இந்திய ரூபாய்',
+            'localized' => 'roupie indienne',
+        ],
+        'te'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'భారతదేశ రూపాయి',
+            'localized' => 'roupie indienne',
+        ],
+        'tg'         => [
             'code'      => 'TJS',
             'numeric'   => 972,
             'native'    => 'Сомонӣ',
             'localized' => 'somoni tadjik',
         ],
-        'th' => [
+        'th'         => [
             'code'      => 'THB',
             'numeric'   => 764,
             'native'    => 'บาท',
             'localized' => 'baht thaïlandais',
         ],
-        'tk' => [
+        'ti'         => [
+            'code'      => 'ETB',
+            'numeric'   => 230,
+            'native'    => 'ብር',
+            'localized' => 'birr éthiopien',
+        ],
+        'tk'         => [
             'code'      => 'TMT',
             'numeric'   => 934,
             'native'    => 'Türkmen manady',
             'localized' => 'nouveau manat turkmène',
         ],
-        'tl' => [
+        'tl'         => [
             'code'      => 'PHP',
             'numeric'   => 608,
             'native'    => 'Philippine Peso',
             'localized' => 'peso philippin',
         ],
-        'tr' => [
+        'tr'         => [
             'code'      => 'TRY',
             'numeric'   => 949,
             'native'    => 'Türk Lirası',
             'localized' => 'livre turque',
         ],
-        'ug' => [
+        'tt'         => [
+            'code'      => 'RUB',
+            'numeric'   => 643,
+            'native'    => 'Россия сумы',
+            'localized' => 'rouble russe',
+        ],
+        'ug'         => [
             'code'      => 'CNY',
             'numeric'   => 156,
             'native'    => 'جۇڭگو يۈەنى',
             'localized' => 'yuan renminbi chinois',
         ],
-        'uk' => [
+        'uk'         => [
             'code'      => 'UAH',
             'numeric'   => 980,
             'native'    => 'українська гривня',
             'localized' => 'hryvnia ukrainienne',
         ],
-        'ur' => [
+        'ur'         => [
             'code'      => 'PKR',
             'numeric'   => 586,
             'native'    => 'پاکستانی روپیہ',
             'localized' => 'roupie pakistanaise',
         ],
-        'uz_Cyrl' => [
+        'uz_Cyrl'    => [
             'code'      => 'UZS',
             'numeric'   => 860,
             'native'    => 'Ўзбекистон сўм',
             'localized' => 'sum ouzbek',
         ],
-        'uz_Latn' => [
+        'uz_Latn'    => [
             'code'      => 'UZS',
             'numeric'   => 860,
             'native'    => 'O‘zbekiston so‘mi',
             'localized' => 'sum ouzbek',
         ],
-        'vi' => [
+        'vi'         => [
             'code'      => 'VND',
             'numeric'   => 704,
             'native'    => 'Đồng Việt Nam',
             'localized' => 'dông vietnamien',
         ],
-        'zh_CN' => [
+        'xh'         => [
+            'code'      => 'ZAR',
+            'numeric'   => 710,
+            'native'    => 'IRandi yaseMzantsi Afrika',
+            'localized' => 'rand sud-africain',
+        ],
+        'yi'         => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => '',
+            'localized' => '',
+        ],
+        'yo'         => [
+            'code'      => 'NGN',
+            'numeric'   => 566,
+            'native'    => 'Náírà Nàìjíríà',
+            'localized' => 'naira nigérian',
+        ],
+        'zh_CN'      => [
             'code'      => 'CNY',
             'numeric'   => 156,
             'native'    => '人民币',
             'localized' => 'yuan renminbi chinois',
         ],
-        'zh_HK' => [
+        'zh_HK'      => [
             'code'      => 'HKD',
             'numeric'   => 344,
             'native'    => '港元',
             'localized' => 'dollar de Hong Kong',
         ],
-        'zh_TW' => [
+        'zh_TW'      => [
             'code'      => 'TWD',
             'numeric'   => 901,
             'native'    => '新台币',
             'localized' => 'nouveau dollar taïwanais',
+        ],
+        'zu'         => [
+            'code'      => 'ZAR',
+            'numeric'   => 710,
+            'native'    => 'i-South African Rand',
+            'localized' => 'rand sud-africain',
         ],
     ]);
 
 it('should check the returned list in Ukrainian')
     ->expect(fn () => flatten(CurrencyNames::get(Locale::Ukrainian, SortBy::Key)))
     ->toBe([
-        'af' => [
+        'af'         => [
             'code'      => 'ZAR',
             'numeric'   => 710,
             'native'    => 'Suid-Afrikaanse rand',
             'localized' => 'південноафриканський ранд',
         ],
-        'ar' => [
+        'ak'         => [
+            'code'      => 'GHS',
+            'numeric'   => 936,
+            'native'    => 'Ghana Sidi',
+            'localized' => 'ганський седі',
+        ],
+        'am'         => [
+            'code'      => 'ETB',
+            'numeric'   => 230,
+            'native'    => 'የኢትዮጵያ ብር',
+            'localized' => 'ефіопський бир',
+        ],
+        'ar'         => [
             'code'      => 'EGP',
             'numeric'   => 818,
             'native'    => 'جنيه مصري',
             'localized' => 'єгипетський фунт',
         ],
-        'az' => [
+        'as'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ভাৰতীয় ৰুপী',
+            'localized' => 'індійська рупія',
+        ],
+        'az'         => [
             'code'      => 'AZN',
             'numeric'   => 944,
             'native'    => 'Azərbaycan Manatı',
             'localized' => 'азербайджанський манат',
         ],
-        'be' => [
+        'be'         => [
             'code'      => 'BYN',
-            'numeric'   => null,
+            'numeric'   => 840,
             'native'    => 'беларускі рубель',
             'localized' => 'білоруський рубль',
         ],
-        'bg' => [
+        'bg'         => [
             'code'      => 'BGN',
             'numeric'   => 975,
             'native'    => 'Български лев',
             'localized' => 'болгарський лев',
         ],
-        'bn' => [
+        'bho'        => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'INR',
+            'localized' => 'індійська рупія',
+        ],
+        'bm'         => [
+            'code'      => 'XOF',
+            'numeric'   => 952,
+            'native'    => 'sefa Fraŋ (BCEAO)',
+            'localized' => 'західноафриканський франк',
+        ],
+        'bn'         => [
             'code'      => 'BDT',
             'numeric'   => 50,
             'native'    => 'বাংলাদেশী টাকা',
             'localized' => 'бангладеська така',
         ],
-        'bs' => [
+        'bs'         => [
             'code'      => 'BAM',
             'numeric'   => 977,
             'native'    => 'Bosanskohercegovačka konvertibilna marka',
             'localized' => 'конвертована марка Боснії і Герцеговини',
         ],
-        'ca' => [
+        'ca'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
         ],
-        'cs' => [
+        'ceb'        => [
+            'code'      => 'PHP',
+            'numeric'   => 608,
+            'native'    => 'Philippine Peso',
+            'localized' => 'філіппінський песо',
+        ],
+        'ckb'        => [
+            'code'      => 'IQD',
+            'numeric'   => 368,
+            'native'    => 'IQD',
+            'localized' => 'іракський динар',
+        ],
+        'cs'         => [
             'code'      => 'CZK',
             'numeric'   => 203,
             'native'    => 'česká koruna',
             'localized' => 'чеська крона',
         ],
-        'cy' => [
+        'cy'         => [
             'code'      => 'GBP',
             'numeric'   => 826,
             'native'    => 'Punt Prydain',
             'localized' => 'англійський фунт',
         ],
-        'da' => [
+        'da'         => [
             'code'      => 'DKK',
             'numeric'   => 208,
             'native'    => 'dansk krone',
             'localized' => 'данська крона',
         ],
-        'de' => [
+        'de'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Euro',
             'localized' => 'євро',
         ],
-        'de_CH' => [
+        'de_CH'      => [
             'code'      => 'CHF',
             'numeric'   => 756,
             'native'    => 'Schweizer Franken',
             'localized' => 'швейцарський франк',
         ],
-        'el' => [
+        'doi'        => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारती रपेऽ',
+            'localized' => 'індійська рупія',
+        ],
+        'ee'         => [
+            'code'      => 'GHS',
+            'numeric'   => 936,
+            'native'    => 'ghana siɖi',
+            'localized' => 'ганський седі',
+        ],
+        'el'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Ευρώ',
             'localized' => 'євро',
         ],
-        'en' => [
+        'en'         => [
             'code'      => 'USD',
             'numeric'   => 840,
             'native'    => 'US Dollar',
             'localized' => 'долар США',
         ],
-        'es' => [
+        'eo'         => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => '',
+            'localized' => '',
+        ],
+        'es'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
         ],
-        'et' => [
+        'et'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
         ],
-        'eu' => [
+        'eu'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euroa',
             'localized' => 'євро',
         ],
-        'fa' => [
+        'fa'         => [
             'code'      => 'IRR',
             'numeric'   => 364,
             'native'    => 'ریال ایران',
             'localized' => 'іранський ріал',
         ],
-        'fi' => [
+        'fi'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
         ],
-        'fil' => [
+        'fil'        => [
             'code'      => 'PHP',
             'numeric'   => 608,
             'native'    => 'Piso ng Pilipinas',
             'localized' => 'філіппінський песо',
         ],
-        'fr' => [
+        'fr'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
         ],
-        'gl' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'euro',
-            'localized' => 'євро',
-        ],
-        'gu' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'ભારતીય રૂપિયા',
-            'localized' => 'індійська рупія',
-        ],
-        'he' => [
-            'code'      => 'ILS',
-            'numeric'   => 376,
-            'native'    => 'שקל חדש',
-            'localized' => 'ізраїльський новий шекель',
-        ],
-        'hi' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'भारतीय रुपया',
-            'localized' => 'індійська рупія',
-        ],
-        'hr' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'euro',
-            'localized' => 'євро',
-        ],
-        'hu' => [
-            'code'      => 'HUF',
-            'numeric'   => 348,
-            'native'    => 'magyar forint',
-            'localized' => 'угорський форинт',
-        ],
-        'hy' => [
-            'code'      => 'AMD',
-            'numeric'   => 51,
-            'native'    => 'հայկական դրամ',
-            'localized' => 'вірменський драм',
-        ],
-        'id' => [
-            'code'      => 'IDR',
-            'numeric'   => 360,
-            'native'    => 'Rupiah Indonesia',
-            'localized' => 'індонезійська рупія',
-        ],
-        'is' => [
-            'code'      => 'ISK',
-            'numeric'   => 352,
-            'native'    => 'íslensk króna',
-            'localized' => 'ісландська крона',
-        ],
-        'it' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'euro',
-            'localized' => 'євро',
-        ],
-        'ja' => [
-            'code'      => 'JPY',
-            'numeric'   => 392,
-            'native'    => '日本円',
-            'localized' => 'японська єна',
-        ],
-        'ka' => [
-            'code'      => 'GEL',
-            'numeric'   => 981,
-            'native'    => 'ქართული ლარი',
-            'localized' => 'грузинський ларі',
-        ],
-        'kk' => [
-            'code'      => 'KZT',
-            'numeric'   => 398,
-            'native'    => 'Қазақстан теңгесі',
-            'localized' => 'казахстанський тенге',
-        ],
-        'km' => [
-            'code'      => 'KHR',
-            'numeric'   => 116,
-            'native'    => 'រៀល​កម្ពុជា',
-            'localized' => 'камбоджійський рієль',
-        ],
-        'kn' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'ಭಾರತೀಯ ರೂಪಾಯಿ',
-            'localized' => 'індійська рупія',
-        ],
-        'ko' => [
-            'code'      => 'KRW',
-            'numeric'   => 410,
-            'native'    => '대한민국 원',
-            'localized' => 'південнокорейський вон',
-        ],
-        'lt' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'Euras',
-            'localized' => 'євро',
-        ],
-        'lv' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'eiro',
-            'localized' => 'євро',
-        ],
-        'mk' => [
-            'code'      => 'MKD',
-            'numeric'   => 807,
-            'native'    => 'Македонски денар',
-            'localized' => 'македонський денар',
-        ],
-        'mn' => [
-            'code'      => 'MNT',
-            'numeric'   => 496,
-            'native'    => 'Монгол төгрөг',
-            'localized' => 'монгольський тугрик',
-        ],
-        'mr' => [
-            'code'      => 'INR',
-            'numeric'   => 356,
-            'native'    => 'भारतीय रुपया',
-            'localized' => 'індійська рупія',
-        ],
-        'ms' => [
-            'code'      => 'MYR',
-            'numeric'   => 458,
-            'native'    => 'Ringgit Malaysia',
-            'localized' => 'малайзійський рингіт',
-        ],
-        'nb' => [
-            'code'      => 'NOK',
-            'numeric'   => 578,
-            'native'    => 'norske kroner',
-            'localized' => 'норвезька крона',
-        ],
-        'ne' => [
-            'code'      => 'NPR',
-            'numeric'   => 524,
-            'native'    => 'नेपाली रूपैयाँ',
-            'localized' => 'непальська рупія',
-        ],
-        'nl' => [
+        'fy'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Euro',
             'localized' => 'євро',
         ],
-        'nn' => [
-            'code'      => 'NOK',
-            'numeric'   => 578,
-            'native'    => 'norske kroner',
-            'localized' => 'норвезька крона',
-        ],
-        'oc' => [
+        'ga'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
-            'native'    => 'EUR',
+            'native'    => 'Euro',
             'localized' => 'євро',
         ],
-        'pl' => [
-            'code'      => 'PLN',
-            'numeric'   => 985,
-            'native'    => 'złoty polski',
-            'localized' => 'польський злотий',
+        'gd'         => [
+            'code'      => 'GBP',
+            'numeric'   => 826,
+            'native'    => 'Punnd Sasannach',
+            'localized' => 'англійський фунт',
         ],
-        'ps' => [
-            'code'      => 'AFN',
-            'numeric'   => 971,
-            'native'    => 'افغانۍ',
-            'localized' => 'афганський афгані',
-        ],
-        'pt' => [
-            'code'      => 'BRL',
-            'numeric'   => 986,
-            'native'    => 'Real brasileiro',
-            'localized' => 'бразильський реал',
-        ],
-        'pt_BR' => [
-            'code'      => 'BRL',
-            'numeric'   => 986,
-            'native'    => 'Real brasileiro',
-            'localized' => 'бразильський реал',
-        ],
-        'ro' => [
-            'code'      => 'RON',
-            'numeric'   => 946,
-            'native'    => 'leu românesc',
-            'localized' => 'румунський лей',
-        ],
-        'ru' => [
-            'code'      => 'RUB',
-            'numeric'   => 643,
-            'native'    => 'российский рубль',
-            'localized' => 'російський рубль',
-        ],
-        'sc' => [
-            'code'      => 'EUR',
-            'numeric'   => 978,
-            'native'    => 'èuro',
-            'localized' => 'євро',
-        ],
-        'si' => [
-            'code'      => 'LKR',
-            'numeric'   => 144,
-            'native'    => 'ශ්‍රී ලංකා රුපියල',
-            'localized' => 'шрі-ланкійська рупія',
-        ],
-        'sk' => [
+        'gl'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
         ],
-        'sl' => [
+        'gu'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ભારતીય રૂપિયા',
+            'localized' => 'індійська рупія',
+        ],
+        'ha'         => [
+            'code'      => 'NGN',
+            'numeric'   => 566,
+            'native'    => 'Nairar Najeriya',
+            'localized' => 'нігерійська найра',
+        ],
+        'haw'        => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => 'USD',
+            'localized' => 'долар США',
+        ],
+        'he'         => [
+            'code'      => 'ILS',
+            'numeric'   => 376,
+            'native'    => 'שקל חדש',
+            'localized' => 'ізраїльський новий шекель',
+        ],
+        'hi'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रुपया',
+            'localized' => 'індійська рупія',
+        ],
+        'hr'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'euro',
+            'localized' => 'євро',
+        ],
+        'hu'         => [
+            'code'      => 'HUF',
+            'numeric'   => 348,
+            'native'    => 'magyar forint',
+            'localized' => 'угорський форинт',
+        ],
+        'hy'         => [
+            'code'      => 'AMD',
+            'numeric'   => 51,
+            'native'    => 'հայկական դրամ',
+            'localized' => 'вірменський драм',
+        ],
+        'id'         => [
+            'code'      => 'IDR',
+            'numeric'   => 360,
+            'native'    => 'Rupiah Indonesia',
+            'localized' => 'індонезійська рупія',
+        ],
+        'ig'         => [
+            'code'      => 'NGN',
+            'numeric'   => 566,
+            'native'    => 'Naịra',
+            'localized' => 'нігерійська найра',
+        ],
+        'is'         => [
+            'code'      => 'ISK',
+            'numeric'   => 352,
+            'native'    => 'íslensk króna',
+            'localized' => 'ісландська крона',
+        ],
+        'it'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'euro',
+            'localized' => 'євро',
+        ],
+        'ja'         => [
+            'code'      => 'JPY',
+            'numeric'   => 392,
+            'native'    => '日本円',
+            'localized' => 'японська єна',
+        ],
+        'ka'         => [
+            'code'      => 'GEL',
+            'numeric'   => 981,
+            'native'    => 'ქართული ლარი',
+            'localized' => 'грузинський ларі',
+        ],
+        'kk'         => [
+            'code'      => 'KZT',
+            'numeric'   => 398,
+            'native'    => 'Қазақстан теңгесі',
+            'localized' => 'казахстанський тенге',
+        ],
+        'km'         => [
+            'code'      => 'KHR',
+            'numeric'   => 116,
+            'native'    => 'រៀល​កម្ពុជា',
+            'localized' => 'камбоджійський рієль',
+        ],
+        'kn'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ಭಾರತೀಯ ರೂಪಾಯಿ',
+            'localized' => 'індійська рупія',
+        ],
+        'ko'         => [
+            'code'      => 'KRW',
+            'numeric'   => 410,
+            'native'    => '대한민국 원',
+            'localized' => 'південнокорейський вон',
+        ],
+        'ku'         => [
+            'code'      => 'TRY',
+            'numeric'   => 949,
+            'native'    => 'TRY',
+            'localized' => 'турецька ліра',
+        ],
+        'ky'         => [
+            'code'      => 'KGS',
+            'numeric'   => 417,
+            'native'    => 'Кыргызстан сому',
+            'localized' => 'киргизький сом',
+        ],
+        'lb'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euro',
+            'localized' => 'євро',
+        ],
+        'lg'         => [
+            'code'      => 'UGX',
+            'numeric'   => 800,
+            'native'    => 'Silingi eya Yuganda',
+            'localized' => 'угандійський шилінг',
+        ],
+        'ln'         => [
+            'code'      => 'CDF',
+            'numeric'   => 976,
+            'native'    => 'Falánga ya Kongó',
+            'localized' => 'конголезький франк',
+        ],
+        'lo'         => [
+            'code'      => 'LAK',
+            'numeric'   => 418,
+            'native'    => 'ລາວ ກີບ',
+            'localized' => 'лаоський кіп',
+        ],
+        'lt'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euras',
+            'localized' => 'євро',
+        ],
+        'lv'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'eiro',
+            'localized' => 'євро',
+        ],
+        'mai'        => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रुपया',
+            'localized' => 'індійська рупія',
+        ],
+        'mg'         => [
+            'code'      => 'MGA',
+            'numeric'   => 969,
+            'native'    => 'Ariary',
+            'localized' => 'малагасійський аріарі',
+        ],
+        'mi'         => [
+            'code'      => 'NZD',
+            'numeric'   => 554,
+            'native'    => 'Tāra o Aotearoa',
+            'localized' => 'новозеландський долар',
+        ],
+        'mk'         => [
+            'code'      => 'MKD',
+            'numeric'   => 807,
+            'native'    => 'Македонски денар',
+            'localized' => 'македонський денар',
+        ],
+        'ml'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ഇന്ത്യൻ രൂപ',
+            'localized' => 'індійська рупія',
+        ],
+        'mn'         => [
+            'code'      => 'MNT',
+            'numeric'   => 496,
+            'native'    => 'Монгол төгрөг',
+            'localized' => 'монгольський тугрик',
+        ],
+        'mni_Mtei'   => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'Indian Rupee',
+            'localized' => 'індійська рупія',
+        ],
+        'mr'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रुपया',
+            'localized' => 'індійська рупія',
+        ],
+        'ms'         => [
+            'code'      => 'MYR',
+            'numeric'   => 458,
+            'native'    => 'Ringgit Malaysia',
+            'localized' => 'малайзійський рингіт',
+        ],
+        'mt'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'ewro',
+            'localized' => 'євро',
+        ],
+        'my'         => [
+            'code'      => 'MMK',
+            'numeric'   => 104,
+            'native'    => 'မြန်မာ ကျပ်',
+            'localized' => 'кʼят Мʼянми',
+        ],
+        'nb'         => [
+            'code'      => 'NOK',
+            'numeric'   => 578,
+            'native'    => 'norske kroner',
+            'localized' => 'норвезька крона',
+        ],
+        'ne'         => [
+            'code'      => 'NPR',
+            'numeric'   => 524,
+            'native'    => 'नेपाली रूपैयाँ',
+            'localized' => 'непальська рупія',
+        ],
+        'nl'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euro',
+            'localized' => 'євро',
+        ],
+        'nn'         => [
+            'code'      => 'NOK',
+            'numeric'   => 578,
+            'native'    => 'norske kroner',
+            'localized' => 'норвезька крона',
+        ],
+        'oc'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'EUR',
+            'localized' => 'євро',
+        ],
+        'om'         => [
+            'code'      => 'ETB',
+            'numeric'   => 230,
+            'native'    => 'Itoophiyaa Birrii',
+            'localized' => 'ефіопський бир',
+        ],
+        'or'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ଭାରତୀୟ ଟଙ୍କା',
+            'localized' => 'індійська рупія',
+        ],
+        'pa'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'ਭਾਰਤੀ ਰੁਪਇਆ',
+            'localized' => 'індійська рупія',
+        ],
+        'pl'         => [
+            'code'      => 'PLN',
+            'numeric'   => 985,
+            'native'    => 'złoty polski',
+            'localized' => 'польський злотий',
+        ],
+        'ps'         => [
+            'code'      => 'AFN',
+            'numeric'   => 971,
+            'native'    => 'افغانۍ',
+            'localized' => 'афганський афгані',
+        ],
+        'pt'         => [
+            'code'      => 'BRL',
+            'numeric'   => 986,
+            'native'    => 'Real brasileiro',
+            'localized' => 'бразильський реал',
+        ],
+        'pt_BR'      => [
+            'code'      => 'BRL',
+            'numeric'   => 986,
+            'native'    => 'Real brasileiro',
+            'localized' => 'бразильський реал',
+        ],
+        'qu'         => [
+            'code'      => 'PEN',
+            'numeric'   => 604,
+            'native'    => 'Sol Peruano',
+            'localized' => 'перуанський новий сол',
+        ],
+        'ro'         => [
+            'code'      => 'RON',
+            'numeric'   => 946,
+            'native'    => 'leu românesc',
+            'localized' => 'румунський лей',
+        ],
+        'ru'         => [
+            'code'      => 'RUB',
+            'numeric'   => 643,
+            'native'    => 'российский рубль',
+            'localized' => 'російський рубль',
+        ],
+        'rw'         => [
+            'code'      => 'RWF',
+            'numeric'   => 646,
+            'native'    => 'RWF',
+            'localized' => 'руандійський франк',
+        ],
+        'sa'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'भारतीय रूप्यकम्',
+            'localized' => 'індійська рупія',
+        ],
+        'sc'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'èuro',
+            'localized' => 'євро',
+        ],
+        'sd'         => [
+            'code'      => 'PKR',
+            'numeric'   => 586,
+            'native'    => 'پاڪستاني رپي',
+            'localized' => 'пакистанська рупія',
+        ],
+        'si'         => [
+            'code'      => 'LKR',
+            'numeric'   => 144,
+            'native'    => 'ශ්‍රී ලංකා රුපියල',
+            'localized' => 'шрі-ланкійська рупія',
+        ],
+        'sk'         => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'euro',
+            'localized' => 'євро',
+        ],
+        'sl'         => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'evro',
             'localized' => 'євро',
         ],
-        'sq' => [
+        'sn'         => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => 'Dora re Amerika',
+            'localized' => 'долар США',
+        ],
+        'so'         => [
+            'code'      => 'SOS',
+            'numeric'   => 706,
+            'native'    => 'Shilingka Soomaaliya',
+            'localized' => 'сомалійський шилінг',
+        ],
+        'sq'         => [
             'code'      => 'ALL',
             'numeric'   => 8,
             'native'    => 'Leku shqiptar',
             'localized' => 'албанський лек',
         ],
-        'sr_Cyrl' => [
+        'sr_Cyrl'    => [
             'code'      => 'RSD',
             'numeric'   => 941,
             'native'    => 'српски динар',
             'localized' => 'сербський динар',
         ],
-        'sr_Latn' => [
+        'sr_Latn'    => [
             'code'      => 'RSD',
             'numeric'   => 941,
             'native'    => 'srpski dinar',
@@ -893,100 +1403,154 @@ it('should check the returned list in Ukrainian')
             'native'    => 'Evro',
             'localized' => 'євро',
         ],
-        'sv' => [
+        'su'         => [
+            'code'      => 'IDR',
+            'numeric'   => 360,
+            'native'    => 'Rupee Indonésia',
+            'localized' => 'індонезійська рупія',
+        ],
+        'sv'         => [
             'code'      => 'SEK',
             'numeric'   => 752,
             'native'    => 'svensk krona',
             'localized' => 'шведська крона',
         ],
-        'sw' => [
+        'sw'         => [
             'code'      => 'TZS',
             'numeric'   => 834,
             'native'    => 'Shilingi ya Tanzania',
             'localized' => 'танзанійський шилінг',
         ],
-        'tg' => [
+        'ta'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'இந்திய ரூபாய்',
+            'localized' => 'індійська рупія',
+        ],
+        'te'         => [
+            'code'      => 'INR',
+            'numeric'   => 356,
+            'native'    => 'భారతదేశ రూపాయి',
+            'localized' => 'індійська рупія',
+        ],
+        'tg'         => [
             'code'      => 'TJS',
             'numeric'   => 972,
             'native'    => 'Сомонӣ',
             'localized' => 'таджицький сомоні',
         ],
-        'th' => [
+        'th'         => [
             'code'      => 'THB',
             'numeric'   => 764,
             'native'    => 'บาท',
             'localized' => 'таїландський бат',
         ],
-        'tk' => [
+        'ti'         => [
+            'code'      => 'ETB',
+            'numeric'   => 230,
+            'native'    => 'ብር',
+            'localized' => 'ефіопський бир',
+        ],
+        'tk'         => [
             'code'      => 'TMT',
             'numeric'   => 934,
             'native'    => 'Türkmen manady',
             'localized' => 'туркменський манат',
         ],
-        'tl' => [
+        'tl'         => [
             'code'      => 'PHP',
             'numeric'   => 608,
             'native'    => 'Philippine Peso',
             'localized' => 'філіппінський песо',
         ],
-        'tr' => [
+        'tr'         => [
             'code'      => 'TRY',
             'numeric'   => 949,
             'native'    => 'Türk Lirası',
             'localized' => 'турецька ліра',
         ],
-        'ug' => [
+        'tt'         => [
+            'code'      => 'RUB',
+            'numeric'   => 643,
+            'native'    => 'Россия сумы',
+            'localized' => 'російський рубль',
+        ],
+        'ug'         => [
             'code'      => 'CNY',
             'numeric'   => 156,
             'native'    => 'جۇڭگو يۈەنى',
             'localized' => 'китайський юань',
         ],
-        'uk' => [
+        'uk'         => [
             'code'      => 'UAH',
             'numeric'   => 980,
             'native'    => 'українська гривня',
             'localized' => 'українська гривня',
         ],
-        'ur' => [
+        'ur'         => [
             'code'      => 'PKR',
             'numeric'   => 586,
             'native'    => 'پاکستانی روپیہ',
             'localized' => 'пакистанська рупія',
         ],
-        'uz_Cyrl' => [
+        'uz_Cyrl'    => [
             'code'      => 'UZS',
             'numeric'   => 860,
             'native'    => 'Ўзбекистон сўм',
             'localized' => 'узбецький сум',
         ],
-        'uz_Latn' => [
+        'uz_Latn'    => [
             'code'      => 'UZS',
             'numeric'   => 860,
             'native'    => 'O‘zbekiston so‘mi',
             'localized' => 'узбецький сум',
         ],
-        'vi' => [
+        'vi'         => [
             'code'      => 'VND',
             'numeric'   => 704,
             'native'    => 'Đồng Việt Nam',
             'localized' => 'вʼєтнамський донг',
         ],
-        'zh_CN' => [
+        'xh'         => [
+            'code'      => 'ZAR',
+            'numeric'   => 710,
+            'native'    => 'IRandi yaseMzantsi Afrika',
+            'localized' => 'південноафриканський ранд',
+        ],
+        'yi'         => [
+            'code'      => 'USD',
+            'numeric'   => 840,
+            'native'    => '',
+            'localized' => '',
+        ],
+        'yo'         => [
+            'code'      => 'NGN',
+            'numeric'   => 566,
+            'native'    => 'Náírà Nàìjíríà',
+            'localized' => 'нігерійська найра',
+        ],
+        'zh_CN'      => [
             'code'      => 'CNY',
             'numeric'   => 156,
             'native'    => '人民币',
             'localized' => 'китайський юань',
         ],
-        'zh_HK' => [
+        'zh_HK'      => [
             'code'      => 'HKD',
             'numeric'   => 344,
             'native'    => '港元',
             'localized' => 'гонконгський долар',
         ],
-        'zh_TW' => [
+        'zh_TW'      => [
             'code'      => 'TWD',
             'numeric'   => 901,
             'native'    => '新台币',
             'localized' => 'новий тайванський долар',
+        ],
+        'zu'         => [
+            'code'      => 'ZAR',
+            'numeric'   => 710,
+            'native'    => 'i-South African Rand',
+            'localized' => 'південноафриканський ранд',
         ],
     ]);
