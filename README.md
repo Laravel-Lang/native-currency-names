@@ -9,11 +9,11 @@
 
 ## Documentation
 
-See the [documentation](https://laravel-lang.com) for detailed installation and [usage](https://laravel-lang.com/usage/features/native-currency-names.html) instructions.
+See the [documentation](https://laravel-lang.com) for detailed installation.
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://laravel-lang.com/contributing.html) for details.
+Please see [CONTRIBUTING](https://laravel-lang.com/contributions.html) for details.
 
 ## License
 
