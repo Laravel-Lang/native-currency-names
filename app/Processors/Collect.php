@@ -18,6 +18,7 @@ declare(strict_types=1);
 namespace LaravelLang\Dev\Processors;
 
 use LaravelLang\Dev\Integrations\Cldr as CldrIntegration;
+use LaravelLang\LocaleList\Locale;
 use LaravelLang\NativeCurrencyNames\CurrencyNames;
 use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -78,11 +79,14 @@ class Collect extends Processor
 
     protected function findName(string $locale, string $forLocale): string
     {
-        return $this->cldr->name($locale, $forLocale);
+        return $this->cldr->name($locale, $forLocale)
+            ?? $this->cldr->name($locale, Locale::English->value)
+            ?? $this->cldr->name($locale, $locale);
     }
 
-    protected function findCode(string $locale, bool $asNumeric = false): int|string|null
+    protected function findCode(string $locale, bool $asNumeric = false): int|string
     {
-        return $this->cldr->code($locale, $asNumeric);
+        return $this->cldr->code($locale, $asNumeric)
+            ?? $this->cldr->code(Locale::English->value, $asNumeric);
     }
 }
