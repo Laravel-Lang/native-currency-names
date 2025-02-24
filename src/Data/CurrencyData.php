@@ -26,8 +26,7 @@ class CurrencyData implements Arrayable
         public ?int $numeric,
         public string $native,
         public string $localized
-    ) {
-    }
+    ) {}
 
     public function toArray(): array
     {
