@@ -180,6 +180,12 @@ it('should check the returned list in French')
             'native'    => 'US Dollar',
             'localized' => 'dollar des États-Unis',
         ],
+        'en_CA' => [
+            'code'      => 'CAD',
+            'numeric'   => 124,
+            'native'    => 'Canadian Dollar',
+            'localized' => 'dollar canadien',
+        ],
         'eo' => [
             'code'      => 'USD',
             'numeric'   => 840,
@@ -633,13 +639,13 @@ it('should check the returned list in French')
         'sr_Latn' => [
             'code'      => 'RSD',
             'numeric'   => 941,
-            'native'    => 'Serbian Dinar',
+            'native'    => 'srpski dinar',
             'localized' => 'dinar serbe',
         ],
         'sr_Latn_ME' => [
             'code'      => 'EUR',
             'numeric'   => 978,
-            'native'    => 'Euro',
+            'native'    => 'Evro',
             'localized' => 'euro',
         ],
         'su' => [
@@ -735,7 +741,7 @@ it('should check the returned list in French')
         'uz_Cyrl' => [
             'code'      => 'UZS',
             'numeric'   => 860,
-            'native'    => 'Uzbekistani Som',
+            'native'    => 'Ўзбекистон сўм',
             'localized' => 'sum ouzbek',
         ],
         'uz_Latn' => [
@@ -940,6 +946,12 @@ it('should check the returned list in Ukrainian')
             'numeric'   => 840,
             'native'    => 'US Dollar',
             'localized' => 'долар США',
+        ],
+        'en_CA' => [
+            'code'      => 'CAD',
+            'numeric'   => 124,
+            'native'    => 'Canadian Dollar',
+            'localized' => 'канадський долар',
         ],
         'eo' => [
             'code'      => 'USD',
@@ -1394,13 +1406,13 @@ it('should check the returned list in Ukrainian')
         'sr_Latn' => [
             'code'      => 'RSD',
             'numeric'   => 941,
-            'native'    => 'Serbian Dinar',
+            'native'    => 'srpski dinar',
             'localized' => 'сербський динар',
         ],
         'sr_Latn_ME' => [
             'code'      => 'EUR',
             'numeric'   => 978,
-            'native'    => 'Euro',
+            'native'    => 'Evro',
             'localized' => 'євро',
         ],
         'su' => [
@@ -1496,7 +1508,7 @@ it('should check the returned list in Ukrainian')
         'uz_Cyrl' => [
             'code'      => 'UZS',
             'numeric'   => 860,
-            'native'    => 'Uzbekistani Som',
+            'native'    => 'Ўзбекистон сўм',
             'localized' => 'узбецький сум',
         ],
         'uz_Latn' => [
