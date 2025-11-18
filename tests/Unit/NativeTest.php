@@ -15,14 +15,13 @@
 
 declare(strict_types=1);
 
-use Illuminate\Support\Collection;
 use LaravelLang\LocaleList\Locale;
 use LaravelLang\NativeCurrencyNames\CurrencyNames;
 use LaravelLang\NativeCurrencyNames\Data\CurrencyData;
 use LaravelLang\NativeCurrencyNames\Enums\SortBy;
 
 it('should not be a clone of the English version')
-    ->expect(fn (): Collection => CurrencyNames::get())
+    ->expect(fn () => CurrencyNames::get())
     ->toBeSameCount()
     ->toBeLocale('_native')
     ->not->toBeLocale('en')
@@ -30,12 +29,12 @@ it('should not be a clone of the English version')
     ->each->toBeInstanceOf(CurrencyData::class);
 
 it('must check the coincidence of the native and translated values')
-    ->expect(fn (): Collection => CurrencyNames::get())
+    ->expect(fn () => CurrencyNames::get())
     ->toBeSameCount()
     ->each->toBeSameNames()->toBeInstanceOf(CurrencyData::class);
 
 it('should check the returned list in French')
-    ->expect(fn (): array => flatten(CurrencyNames::get(Locale::French, SortBy::Key)))
+    ->expect(fn () => flatten(CurrencyNames::get(Locale::French, SortBy::Key)))
     ->toBe([
         'af' => [
             'code'      => 'ZAR',
@@ -294,12 +293,6 @@ it('should check the returned list in French')
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'euro',
-        ],
-        'ht' => [
-            'code'      => 'HTG',
-            'numeric'   => 332,
-            'native'    => 'gourde haïtienne',
-            'localized' => 'gourde haïtienne',
         ],
         'hu' => [
             'code'      => 'HUF',
@@ -808,7 +801,7 @@ it('should check the returned list in French')
     ]);
 
 it('should check the returned list in Ukrainian')
-    ->expect(fn (): array => flatten(CurrencyNames::get(Locale::Ukrainian, SortBy::Key)))
+    ->expect(fn () => flatten(CurrencyNames::get(Locale::Ukrainian, SortBy::Key)))
     ->toBe([
         'af' => [
             'code'      => 'ZAR',
@@ -1067,12 +1060,6 @@ it('should check the returned list in Ukrainian')
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
-        ],
-        'ht' => [
-            'code'      => 'HTG',
-            'numeric'   => 332,
-            'native'    => 'gourde haïtienne',
-            'localized' => 'гаїтянський гурд',
         ],
         'hu' => [
             'code'      => 'HUF',

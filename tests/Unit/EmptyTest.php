@@ -15,12 +15,11 @@
 
 declare(strict_types=1);
 
-use Illuminate\Support\Collection;
 use LaravelLang\NativeCurrencyNames\CurrencyNames;
 
 it('checks for empty values being passed')
     ->with('locales-empty')
-    ->expect(fn (?string $locale): Collection => CurrencyNames::get($locale))
+    ->expect(fn (?string $locale) => CurrencyNames::get($locale))
     ->toBeSameCount()
     ->toBeCompileLocales()
     ->not->toBeEmpty();

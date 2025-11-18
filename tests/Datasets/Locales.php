@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 use LaravelLang\LocaleList\Locale;
 
-dataset('locales-string', fn (): array => Locale::values());
-dataset('locales-enum', fn (): array => Locale::cases());
+dataset('locales-string', fn () => Locale::values());
+dataset('locales-enum', fn () => Locale::cases());
 dataset('locales-incorrect', ['foo', 'bar', 'baz']);
 dataset('locales-empty', ['', null]);
