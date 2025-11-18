@@ -294,6 +294,12 @@ it('should check the returned list in French')
             'native'    => 'euro',
             'localized' => 'euro',
         ],
+        'ht' => [
+            'code'      => 'HTG',
+            'numeric'   => 332,
+            'native'    => 'gourde haïtienne',
+            'localized' => 'gourde haïtienne',
+        ],
         'hu' => [
             'code'      => 'HUF',
             'numeric'   => 348,
@@ -1060,6 +1066,12 @@ it('should check the returned list in Ukrainian')
             'numeric'   => 978,
             'native'    => 'euro',
             'localized' => 'євро',
+        ],
+        'ht' => [
+            'code'      => 'HTG',
+            'numeric'   => 332,
+            'native'    => 'gourde haïtienne',
+            'localized' => 'гаїтянський гурд',
         ],
         'hu' => [
             'code'      => 'HUF',
