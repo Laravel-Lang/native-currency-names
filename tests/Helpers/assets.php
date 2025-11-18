@@ -34,9 +34,7 @@ expect()->extend('toBeLocale', function (Locale|string $locale, SortBy $sortBy =
     return $this;
 });
 
-expect()->extend('toBeCompileLocales', function (SortBy $sortBy = SortBy::None) {
-    return $this->toBeLocale('_native', $sortBy);
-});
+expect()->extend('toBeCompileLocales', fn (SortBy $sortBy = SortBy::None) => $this->toBeLocale('_native', $sortBy));
 
 expect()->extend('toBeSameNames', function () {
     Assert::assertSame($this->value->native, $this->value->localized);

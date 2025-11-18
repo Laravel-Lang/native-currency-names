@@ -35,18 +35,18 @@ class Cldr extends Processor
     protected function toInstall(): string
     {
         return collect(parent::locales())
-            ->map(fn (string $locale) => [
+            ->map(fn (string $locale): array => [
                 $locale,
                 Str::before($locale, '_'),
             ])
             ->flatten()
             ->unique()
             ->when($this->notSupported, fn (Collection $items, array $except) => $items->filter(
-                fn (string $locale) => ! in_array($locale, $except, true)
+                fn (string $locale): bool => ! in_array($locale, $except, true)
             ))
-            ->filter(fn (string $locale) => ! Str::contains($locale, ['-', '_']))
+            ->filter(fn (string $locale): bool => ! Str::contains($locale, ['-', '_']))
             ->sort()
-            ->map(fn (string $locale) => '+' . $locale)
+            ->map(fn (string $locale): string => '+' . $locale)
             ->implode(',');
     }
 }

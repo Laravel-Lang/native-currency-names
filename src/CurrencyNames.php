@@ -45,7 +45,7 @@ class CurrencyNames
         return collect(static::load(static::path($locale)))
             ->when($sortBy === SortBy::Key, fn (Collection $items) => $items->sortKeys())
             ->when($sortBy === SortBy::Value, fn (Collection $items) => $items->sortBy('name'))
-            ->map(fn (array $item) => new CurrencyData(
+            ->map(fn (array $item): CurrencyData => new CurrencyData(
                 $item['code'],
                 $item['numeric'],
                 $item['native'],

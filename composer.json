@@ -36,6 +36,7 @@
         "illuminate/collections": "^10.0 || ^11.0 || ^12.0"
     },
     "require-dev": {
+        "dragon-code/codestyler": "^6.4",
         "illuminate/support": "^10.0 || ^11.0 || ^12.0",
         "laravel-lang/locale-list": "^1.2",
         "pestphp/pest": "^2.24.3 || ^3.0",
@@ -60,7 +61,6 @@
     },
     "config": {
         "allow-plugins": {
-            "dragon-code/codestyler": true,
             "ergebnis/composer-normalize": true,
             "friendsofphp/php-cs-fixer": true,
             "laravel/pint": true,
@@ -72,9 +72,18 @@
         "sort-packages": true
     },
     "scripts": {
+        "post-update-cmd": [
+            "vendor/bin/codestyle pint 8.2",
+            "vendor/bin/codestyle rector default",
+            "composer normalize"
+        ],
         "collect": [
             "php bin/native cldr",
             "php bin/native collect"
+        ],
+        "style": [
+            "vendor/bin/rector",
+            "vendor/bin/pint --parallel"
         ],
         "test": [
             "php vendor/bin/pest --parallel"

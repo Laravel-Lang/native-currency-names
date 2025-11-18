@@ -18,7 +18,7 @@ declare(strict_types=1);
 use LaravelLang\LocaleList\Locale;
 use LaravelLang\NativeCurrencyNames\CurrencyNames;
 
-it('checks if the enum matches the locale value', function (Locale $locale) {
+it('checks if the enum matches the locale value', function (Locale $locale): void {
     expect(CurrencyNames::get($locale))
         ->toBeSameCount()
         ->toBeLocale($locale)
