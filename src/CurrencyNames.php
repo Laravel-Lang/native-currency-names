@@ -28,9 +28,7 @@ class CurrencyNames
 {
     public static string $default = '_native';
 
-    /**
-     * @return Collection<CurrencyData>
-     */
+    /** @return Collection<CurrencyData> */
     public static function get(BackedEnum|string|null $locale = null, SortBy $sortBy = SortBy::None): Collection
     {
         if ($locale = static::locale($locale)) {
