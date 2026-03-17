@@ -150,6 +150,12 @@ it('should check the returned list in French')
             'native'    => 'Euro',
             'localized' => 'euro',
         ],
+        'de_AT' => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euro',
+            'localized' => 'euro',
+        ],
         'de_CH' => [
             'code'      => 'CHF',
             'numeric'   => 756,
@@ -918,6 +924,12 @@ it('should check the returned list in Ukrainian')
             'localized' => 'данська крона',
         ],
         'de' => [
+            'code'      => 'EUR',
+            'numeric'   => 978,
+            'native'    => 'Euro',
+            'localized' => 'євро',
+        ],
+        'de_AT' => [
             'code'      => 'EUR',
             'numeric'   => 978,
             'native'    => 'Euro',
