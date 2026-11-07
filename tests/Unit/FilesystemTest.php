@@ -75,3 +75,32 @@ test('store overwrites an existing file', function () {
 
     expect(Filesystem::load($path))->toBe(['b' => 2]);
 });
+
+test('store throws when the directory cannot be created', function () {
+    mkdir($this->dir);
+    file_put_contents($this->dir . '/nested', 'not a directory');
+
+    set_error_handler(static fn () => true);
+
+    try {
+        Filesystem::store($this->dir . '/nested/en.json', ['a' => 1]);
+    }
+    finally {
+        restore_error_handler();
+    }
+})->throws(RuntimeException::class, 'was not created');
+
+test('store throws when the file cannot be written', function () {
+    mkdir($this->dir);
+    mkdir($this->dir . '/en.json');
+
+    set_error_handler(static fn () => true);
+
+    try {
+        Filesystem::store($this->dir . '/en.json', ['a' => 1]);
+    }
+    finally {
+        restore_error_handler();
+        rmdir($this->dir . '/en.json');
+    }
+})->throws(RuntimeException::class, 'could not be written');
