@@ -27,7 +27,7 @@ afterEach(function () {
     }
 
     is_dir($this->dir . '/nested') && rmdir($this->dir . '/nested');
-    is_dir($this->dir) && rmdir($this->dir);
+    is_dir($this->dir)             && rmdir($this->dir);
 });
 
 test('load returns an empty array when the file does not exist', function () {
@@ -84,8 +84,7 @@ test('store throws when the directory cannot be created', function () {
 
     try {
         Filesystem::store($this->dir . '/nested/en.json', ['a' => 1]);
-    }
-    finally {
+    } finally {
         restore_error_handler();
     }
 })->throws(RuntimeException::class, 'was not created');
@@ -98,8 +97,7 @@ test('store throws when the file cannot be written', function () {
 
     try {
         Filesystem::store($this->dir . '/en.json', ['a' => 1]);
-    }
-    finally {
+    } finally {
         restore_error_handler();
         rmdir($this->dir . '/en.json');
     }
